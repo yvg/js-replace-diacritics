@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>replace diacritics example</title>
+  </head>
+  <body>
+    <p>Type some caracters like é ô å ü ğ…:</p>
+    <input>
+    <br>
+    <output>
+    <script src="replace-diacritics.js"></script>
+    <script>
+       (function(){
+        var input  = document.querySelector('input'),
+            output = document.querySelector('output');
+        input.addEventListener('keyup', function(){
+          output.value = replaceDiacritics( input.value );
+        }, true);
+      }());
+    </script>
+  </body>
+</html>
